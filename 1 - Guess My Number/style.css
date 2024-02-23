@@ -1,0 +1,44 @@
+body {
+    font-family: "Inconsolata", monospace;
+    background: linear-gradient(to bottom, #44617e, #ffffff);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    color: #3b546d;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    border-bottom: 5px solid #44617e; /* Barre en-dessous du titre */
+    padding-bottom: 10px; /* Espace entre la barre et le texte */
+}
+
+button {
+    font-family: "Inconsolata", monospace;
+    padding: 10px 20px;
+    background-color: #44617e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2b4259;
+}
+
+input {
+    font-family: "Inconsolata", monospace;
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+}
