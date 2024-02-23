@@ -24,7 +24,7 @@ function didIWin() {
 
   //console.log(userNumberToFind, userGuess, attempts);
 
-  if (isNaN(userGuess) || userGuess < 0 || userGuess > 51) {
+  if (isNaN(userGuess) || userGuess < 0 || userGuess > 51 || userGuess == "") {
     message.textContent = "Please enter a number between 1 and 50.";
     message.style.color = "red";
   } else if (userGuess == userNumberToFind) {

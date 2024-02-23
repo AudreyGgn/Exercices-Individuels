@@ -1,0 +1,35 @@
+body {
+    font-family: "fredoka";
+    background: #5e848f;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    margin: 5%;
+    font-size:3em;
+}
+
+.container {
+    text-align: center;
+    color: #3e5b63;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 5%;
+    width: 30vw;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 75%;
+}
+
+p {
+    font-size: 1.1em;
+}
