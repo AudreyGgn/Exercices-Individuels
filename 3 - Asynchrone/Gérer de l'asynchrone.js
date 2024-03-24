@@ -53,5 +53,5 @@ function compareLoadingTimes(a, b) {
   return a.loadingTime - b.loadingTime;
 }
 
-// Appel de la fonction principale
+// Appel de la fonction principale (à lancer dans la console avec NodeJS)
 main();
