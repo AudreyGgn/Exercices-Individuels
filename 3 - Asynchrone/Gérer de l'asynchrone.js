@@ -1,3 +1,10 @@
+/*----- CONSIGNES -----
+On veut développer un petit script qui teste la réactivité d’une série de sites, et qui classe ces sites par temps 
+d’accès. L’objectif est donc de lancer en parallèle les demandes de chargement des sites et son url et le temps qu’a demandé 
+le chargement. Vous choisissez vous-mêmes les sites à auditer en essayant de trouver des sources variées.
+Bonus perso : je termine par trier les URL selon leur temps de chargement.
+--------------------- */
+
 //Tableau des URLs à tester
 let urls = [
   "https://adatechschool.fr/",
