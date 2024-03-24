@@ -1,2 +1,2 @@
 # Exercices-Individuels
-Entraînements &amp; exercices ludiques d'algorythmie Ada Tech School
+Entraînements Ada Tech School à la programmation via des exercices ludiques d'algorythmie et découverte d'autres concepts
