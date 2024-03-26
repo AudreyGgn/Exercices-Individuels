@@ -15,7 +15,7 @@ def retraitAllu(nbreAlluARetirer):
 
 
 #Fonction pour demander combien d'allu à retirer
-cd .
+
 def demande(numJoueur):
     nbreAlluARetirer = input("Joueur " + str(numJoueur) + ", Combien voulez-vous retirer d'allumettes entre 1 et 6 ?")
     nbreAlluARetirer = int(nbreAlluARetirer)
