@@ -56,6 +56,7 @@ public class Main {
             Sort sort = new Sort();
             sort.printNameList(pokemonArray);
             sort.sortByName(pokemonArray);
+            sort.printPokemonEvolutions(pokemonArray);
 
         } catch (IOException e) {
             e.printStackTrace();

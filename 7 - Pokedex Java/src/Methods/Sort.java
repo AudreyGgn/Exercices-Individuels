@@ -21,7 +21,7 @@ public class Sort {
         System.out.print("Entrez le nom du pokemon que vous recherchez : ");
         String inputName = scanner.nextLine();
         System.out.println(inputName);
-        scanner.close();
+        //scanner.close(); --> fermé après dans la dernière fonction qui l'utilise
 
         //Etape 2 : on boucle sur un tableau et quand le nom matche, on retourne l'index du tableau correspondant
         //sous la forme d'un joli objet java
@@ -42,8 +42,9 @@ public class Sort {
         }
     }
 
+
     //Afficher une liste avec le nom de tous les pokemons contenus dans le tableau de pkmn
-    public void printNameList(JsonArray pokemonArray){
+    public void printNameList(JsonArray pokemonArray) {
 
         ArrayList<String> pokemonNameList = new ArrayList<String>();
 
@@ -53,5 +54,34 @@ public class Sort {
             pokemonNameList.add(name);
         }
         System.out.println("Liste des " + pokemonArray.size() + " pokémons disponibles : " + pokemonNameList);
+    }
+    public void printPokemonEvolutions(JsonArray pokemonArray){
+        System.out.print("Entrez le nom du pokemon dont vous souhaitez connaître les évolutions : ");
+        String inputName = scanner.nextLine();
+        System.out.println(inputName);
+        scanner.close();
+
+        for (int i = 0; i < pokemonArray.size(); i++) {
+
+            JsonObject pokemonObject = pokemonArray.get(i).getAsJsonObject();
+            String name = pokemonObject.get("name").getAsString();
+            Pokemon pokemon = gson.fromJson(pokemonObject, Pokemon.class);
+
+            if (inputName.equals(name)) {
+
+                ArrayList<String> pokemonNameEvolutionList = new ArrayList<String>();
+
+                JsonArray nextEvolutionArray = pokemonObject.getAsJsonArray("next_evolution");
+
+                for (int y = 0; y < nextEvolutionArray.size(); y++) {
+                    JsonObject evolutionObject = nextEvolutionArray.get(y).getAsJsonObject();
+                    String evolutionName = evolutionObject.get("name").getAsString();
+                    pokemonNameEvolutionList.add(evolutionName);
+                }
+
+                System.out.println("Evolutions : " + pokemonNameEvolutionList);
+                break;
+            }
+        }
     }
 }
