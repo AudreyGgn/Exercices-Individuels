@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allumettes</title>
+</head>
+<body>
+    <script>
+    
+    let paquetAll = 50
+
+    function retraitAllu(nombreAlluARetirer) {
+        paquetAll = paquetAll - nombreAlluARetirer
+        return paquetAll
+    }
+
+    function demande(numero) {
+        nombreAlluARetirerDemande = prompt("Joueur " + numero + " : Combien d'allumettes à retirer entre 1 et 6 ?", "nombre d'allumettes")
+        
+        if (isNaN(nombreAlluARetirerDemande)) {
+            demande(numero)
+        }
+        else if (1 < nombreAlluARetirerDemande && nombreAlluARetirerDemande > 6) {
+            demande(numero)
+        }
+
+        return nombreAlluARetirerDemande
+    }
+
+    function YouWin() {
+        if (paquetAll === 0) {
+            alert("You win !")
+        }
+    }
+
+    function YouLoose() {
+        if (paquetAll < 0) {
+            alert("You loose... Try again !");
+        }
+    }
+
+    function PromptJoueur() {
+        NbreJoueur = prompt("A combien voulez-vous jouer ?")
+        return NbreJoueur
+    }
+
+
+    let NombreJoueur = PromptJoueur()
+    let numJoueur = 1
+
+    function gamePlay() {
+        while (paquetAll > 0) {
+
+            if (numJoueur > NombreJoueur) {
+            numJoueur = 1
+            }
+
+            demande(numJoueur)
+            console.log("Allu à retirer :", nombreAlluARetirerDemande)
+            console.log("Allu restantes dans le paquet :", retraitAllu(nombreAlluARetirerDemande))
+            YouWin()
+            YouLoose()
+            numJoueur = numJoueur + 1
+        }
+    }
+    
+    gamePlay()
+
+
+    </script>
+</body>
+</html>
